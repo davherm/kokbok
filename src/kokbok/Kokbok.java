@@ -16,6 +16,9 @@ public class Kokbok {
 		
 		Recipe recipe = createRecipe();
 		recipes.add(recipe);
+		recipes.add(recipe);
+		recipes.add(recipe);
+		
 		
 		initialize();
 	}
@@ -34,34 +37,31 @@ public class Kokbok {
 		
 		GridLayout grid = new GridLayout(0,3,100,100);
 		panel.setLayout(grid);
-		/*for() {
-			JButton[] buttons = new..
-		}*/
-		JButton recept1 = new JButton("recept1");
-		JButton recept2 = new JButton("recept2");
-		JButton recept3 = new JButton("recept3");
-		JButton recept4 = new JButton("recept4");
 		
-		panel.add(recept1);
-		panel.add(recept2);
-		panel.add(recept3);
-		panel.add(recept4);
+		//create one button for each existing recipe
+		ArrayList<JButton> buttons = new ArrayList<JButton>();
 		
-		recept1.addActionListener( new ActionListener()
-		{
-		    public void actionPerformed(ActionEvent e)
-		    {
-		        createRecipeFrame();
-		    }
-		});
-
+		for(Recipe recipe : recipes) {
+			JButton recipeButton = new JButton(recipe.getTitle());
+			panel.add(recipeButton);
+			
+			recipeButton.addActionListener( new ActionListener()
+			{
+			    public void actionPerformed(ActionEvent e)
+			    {
+			        createRecipeFrame(recipe);
+			    }
+			});
+			
+		}
+		
 		
 		
 		
 		window.setVisible(true);
 	}
 	
-	public void createRecipeFrame() {
+	public void createRecipeFrame(Recipe recipe) {
 		JFrame window = new JFrame();
 		JPanel panel = new JPanel();
 		
