@@ -3,7 +3,10 @@ package kokbok;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 import javax.swing.*;
 
@@ -12,14 +15,7 @@ public class Kokbok {
 	private int height = 600;
 	private ArrayList<Recipe> recipes= new ArrayList<Recipe>();
 	
-	public Kokbok() {
-		
-		Recipe recipe = createRecipe();
-		recipes.add(recipe);
-		recipes.add(recipe);
-		recipes.add(recipe);
-		
-		
+	public Kokbok() {	
 		initialize();
 	}
 	
@@ -38,9 +34,7 @@ public class Kokbok {
 		GridLayout grid = new GridLayout(0,3,100,100);
 		panel.setLayout(grid);
 		
-		//create one button for each existing recipe
-		ArrayList<JButton> buttons = new ArrayList<JButton>();
-		
+		//create one button for each existing recipe		
 		for(Recipe recipe : recipes) {
 			JButton recipeButton = new JButton(recipe.getTitle());
 			panel.add(recipeButton);
@@ -54,6 +48,17 @@ public class Kokbok {
 			});
 			
 		}
+		
+		JButton newRecipe = new JButton("create new recipe");
+		panel.add(newRecipe);
+		
+		newRecipe.addActionListener( new ActionListener()
+		{
+		    public void actionPerformed(ActionEvent e)
+		    {
+		        readRecipes();
+		    }
+		});
 		
 		
 		
@@ -85,14 +90,28 @@ public class Kokbok {
 		window.setVisible(true);
 	}
 	
-	public Recipe createRecipe() {
-		Recipe recipe = new Recipe();
-		recipe.setTitle("example");
-		
-		String[] steps = new String[] {"step 1", "step 2", "step 3"};
-		recipe.setSteps(steps);
-		
-		return recipe;
+	public void readRecipes() {
+		ArrayList<String> steps = new ArrayList<String>();
+		try {
+			Recipe recipe = new Recipe();
+		      File myObj = new File("recipes.txt");
+		      Scanner myReader = new Scanner(myObj);  
+		      
+		      if(myReader.hasNextLine()) recipe.setTitle(myReader.nextLine());
+		      
+		      while (myReader.hasNextLine()) {
+		        String data = myReader.nextLine();
+		        if(data.equals("%"));
+		        else steps.add(data);
+		        System.out.println(data);
+		      }
+		      myReader.close();
+		    } 
+		catch (FileNotFoundException e) 
+			{
+		      System.out.println("An error occurred.");
+		      e.printStackTrace();
+		    }
 	}
 
 }
