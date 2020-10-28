@@ -46,17 +46,16 @@ public class Kokbok {
 			        createRecipeFrame(recipe);
 			    }
 			});
-			
 		}
 		
-		JButton newRecipe = new JButton("create new recipe");
+		JButton newRecipe = new JButton("update recipes"); //first button to read recipes from file
 		panel.add(newRecipe);
 		
 		newRecipe.addActionListener( new ActionListener()
 		{
 		    public void actionPerformed(ActionEvent e)
 		    {
-		        readRecipes();
+		        readRecipesFromFile();
 		    }
 		});
 		
@@ -66,7 +65,8 @@ public class Kokbok {
 		window.setVisible(true);
 	}
 	
-	public void createRecipeFrame(Recipe recipe) {
+	//new window frame for a recipe that is clicked from main menu
+	public void createRecipeFrame(Recipe recipe) { 
 		JFrame window = new JFrame();
 		JPanel panel = new JPanel();
 		
@@ -90,20 +90,27 @@ public class Kokbok {
 		window.setVisible(true);
 	}
 	
-	public void readRecipes() {
+	public void readRecipesFromFile() {
+		Recipe recipe = new Recipe();
 		ArrayList<String> steps = new ArrayList<String>();
 		try {
-			Recipe recipe = new Recipe();
 		      File myObj = new File("recipes.txt");
 		      Scanner myReader = new Scanner(myObj);  
 		      
-		      if(myReader.hasNextLine()) recipe.setTitle(myReader.nextLine());
+		      if(myReader.hasNextLine()) recipe.setTitle(myReader.nextLine()); //first title
 		      
 		      while (myReader.hasNextLine()) {
 		        String data = myReader.nextLine();
-		        if(data.equals("%"));
+		        if(data.equals("%")) {
+		        	//% means there is a new recipe starting next line, so save the current and clear all local variables
+		        	recipe.setSteps(steps);
+		        	recipes.add(recipe);
+		        	
+		        	recipe.setTitle(myReader.nextLine()); //will overwrite if title already exists, so no need to clear past values
+		        	steps.clear(); //needs to be cleared..
+		        }
 		        else steps.add(data);
-		        System.out.println(data);
+		        System.out.println(data); //doesnt print titles, but thats okay
 		      }
 		      myReader.close();
 		    } 
@@ -112,6 +119,7 @@ public class Kokbok {
 		      System.out.println("An error occurred.");
 		      e.printStackTrace();
 		    }
+		
 	}
 
 }
