@@ -1,13 +1,28 @@
-title
-step1
-step2
-step3
-%
-title2
-step1
-step2
-step3
-step4
-step5
-step6
-step7
+title: tacokrydda
+step: blanda allt?
+ingredient: 2tsk spiskummin
+ingredient: 2tsk paprikapulver
+ingredient: 1/2tsk lökpulver
+ingredient: 1/2tsk vitlökspulver
+ingredient: 1/2tsk chilipulver
+ingredient: 1/2tsk cayenne
+ingredient: 1krm koriander
+ingredient: 1krm oregano
+ingredient: 1krm salt
+ingredient: 1krm svartpeppar
+title: rödbetshummus
+step: sätt ugnenen på 200C, skiva rödbetorna i fjärdedelar
+step: rosta rödbetorna i ugnen 20min
+step: lägg allt i matberedare och mixa i flera sekunder, det ska bli en kräm.
+step: smaka av med salt och peppar, mer fraiche/sesamfrön efter behov
+ingredient: 3 rödbetor
+ingredient: 100g kikärtor
+ingredient: 1msk citronsaft
+ingredient: 1msk sesamfrön
+ingredient: 2msk creme fraiche
+title: pppp
+step: 1
+step: 2123213213
+ingredient: asd asd
+ingredient: ads asd
+ingredient: ads asd

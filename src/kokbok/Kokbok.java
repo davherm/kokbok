@@ -14,6 +14,8 @@ public class Kokbok {
 	private int width = 800;
 	private int height = 600;
 	private ArrayList<Recipe> recipes= new ArrayList<Recipe>();
+	JFrame mainwindow;
+	JPanel mainpanel;
 	
 	public Kokbok() {	
 		initialize();
@@ -24,32 +26,20 @@ public class Kokbok {
 	}
 	
 	private void initialize() {
-		JFrame window = new JFrame(); //window
-		JPanel panel = new JPanel(); //actual contentpane
-		panel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10)); //outer padding
-		window.setContentPane(panel);
+		mainwindow = new JFrame(); //window
+		mainpanel = new JPanel(); //actual contentpane
+		mainpanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10)); //outer padding
+		mainwindow.setContentPane(mainpanel);
 
-		window.setBounds(0, 0, width, height);
+		mainwindow.setBounds(0, 0, width, height);
 		
 		GridLayout grid = new GridLayout(0,3,100,100);
-		panel.setLayout(grid);
+		mainpanel.setLayout(grid);
 		
-		//create one button for each existing recipe		
-		for(Recipe recipe : recipes) {
-			JButton recipeButton = new JButton(recipe.getTitle());
-			panel.add(recipeButton);
-			
-			recipeButton.addActionListener( new ActionListener()
-			{
-			    public void actionPerformed(ActionEvent e)
-			    {
-			        createRecipeFrame(recipe);
-			    }
-			});
-		}
+		
 		
 		JButton newRecipe = new JButton("update recipes"); //first button to read recipes from file
-		panel.add(newRecipe);
+		mainpanel.add(newRecipe);
 		
 		newRecipe.addActionListener( new ActionListener()
 		{
@@ -62,7 +52,7 @@ public class Kokbok {
 		
 		
 		
-		window.setVisible(true);
+		mainwindow.setVisible(true);
 	}
 	
 	//new window frame for a recipe that is clicked from main menu
@@ -76,13 +66,11 @@ public class Kokbok {
 		BoxLayout box = new BoxLayout(panel, BoxLayout.Y_AXIS);
 		panel.setLayout(box);
 		
-		ArrayList<JLabel> steps = new ArrayList<JLabel>();
-		for(String step : recipes.get(0).getSteps()) {
-			steps.add(new JLabel(step));
+		for(String step : recipe.getSteps()) {
+			panel.add(new JLabel(step));
 		}
-		
-		for(JLabel step : steps) {
-			panel.add(step);
+		for(String ingredient : recipe.getIngredients()) {
+			panel.add(new JLabel(ingredient));
 		}
 		
 		
@@ -92,34 +80,65 @@ public class Kokbok {
 	
 	public void readRecipesFromFile() {
 		Recipe recipe = new Recipe();
-		ArrayList<String> steps = new ArrayList<String>();
 		try {
 		      File myObj = new File("recipes.txt");
 		      Scanner myReader = new Scanner(myObj);  
 		      
-		      if(myReader.hasNextLine()) recipe.setTitle(myReader.nextLine()); //first title
-		      
+		      String data = myReader.nextLine();
 		      while (myReader.hasNextLine()) {
-		        String data = myReader.nextLine();
-		        if(data.equals("%")) {
-		        	//% means there is a new recipe starting next line, so save the current and clear all local variables
-		        	recipe.setSteps(steps);
-		        	recipes.add(recipe);
-		        	
-		        	recipe.setTitle(myReader.nextLine()); //will overwrite if title already exists, so no need to clear past values
-		        	steps.clear(); //needs to be cleared..
+		        if(data.startsWith("title")) {      	
+		        	recipe.setTitle(data.substring(6).trim()); //remove first 6 chars, from "title: example " to just " example ", then trim first and last space
+		        	data = myReader.nextLine();
 		        }
-		        else steps.add(data);
-		        System.out.println(data); //doesnt print titles, but thats okay
+		        else if(data.startsWith("step")){
+		        	recipe.addStep(data.substring(5).trim());		        	
+		        	data = myReader.nextLine();	        	
+		        }
+		        else if(data.startsWith("ingredient")){
+		        	recipe.addIngredient(data.substring(11).trim());
+		        	
+		        	data = myReader.nextLine();
+		        	if(!myReader.hasNextLine() || data.startsWith("title")) { // check if it's time to save current recipe and start reading a new one
+		        		if(!myReader.hasNextLine()) recipe.addIngredient(data.substring(11).trim());
+		        		recipes.add(recipe);
+		        		recipe = new Recipe();
+		        	}
+		        	
+		        }
+		        else System.out.println("something bad was read");
+		        
 		      }
 		      myReader.close();
 		    } 
+		
 		catch (FileNotFoundException e) 
 			{
 		      System.out.println("An error occurred.");
 		      e.printStackTrace();
-		    }
+		    }		
+
 		
+		updateRecipeButtons();
+		mainpanel.revalidate();
+		mainpanel.repaint();
+		
+	}
+	
+	//creates one button for each existing recipe, with listeners to each one
+	public void updateRecipeButtons() {
+				
+		for(Recipe recipe : recipes) {
+			JButton recipeButton = new JButton(recipe.getTitle());
+			mainpanel.add(recipeButton);
+			
+			recipeButton.addActionListener( new ActionListener()
+			{
+			    public void actionPerformed(ActionEvent e)
+			    {
+			        createRecipeFrame(recipe);
+			    }
+			});
+		}
 	}
 
 }
