@@ -96,7 +96,7 @@ public class Kokbok {
 		Recipe recipe = new Recipe();
 		try {
 		      File myObj = new File("recipes.txt");
-		      Scanner myReader = new Scanner(myObj);  
+		      Scanner myReader = new Scanner(myObj, "UTF-8");  
 		      
 		      String data = myReader.nextLine();
 		      while (myReader.hasNextLine()) {
