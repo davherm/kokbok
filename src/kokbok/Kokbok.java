@@ -67,7 +67,7 @@ public class Kokbok {
 		window.setContentPane(panel);
 		window.setBounds(0, 0, width, height);
 		
-		GridLayout grid = new GridLayout(0,2,20,20); //
+		GridLayout grid = new GridLayout(0,2,10,10); //
 		panel.setLayout(grid);
 		
 		BoxLayout leftBox = new BoxLayout(leftPanel, BoxLayout.Y_AXIS);
@@ -80,8 +80,8 @@ public class Kokbok {
 		
 		leftPanel.add(new JLabel(recipe.getTitle())).setFont(new Font("Serif",Font.BOLD, 24));
 		
-		for(int i = 0; i < recipe.getSteps().size(); i++) {
-			leftPanel.add(new JLabel("step " + i + ": " + recipe.getSteps().get(i)));
+		for(int i = 1; i <= recipe.getSteps().size(); i++) {
+			leftPanel.add(new JLabel("<html>" + "step " + i + ": " + recipe.getSteps().get(i-1) + "</html>"));
 		}
 		for(String ingredient : recipe.getIngredients()) {
 			rightPanel.add(new JLabel(ingredient));

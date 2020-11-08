@@ -20,9 +20,29 @@ ingredient: 100g kikärtor
 ingredient: 1msk citronsaft
 ingredient: 1msk sesamfrön
 ingredient: 2msk creme fraiche
-title: pppp
-step: 1
-step: 2123213213
-ingredient: asd asd
-ingredient: ads asd
-ingredient: ads asd
+title: kikärtscurry
+step: Stek kanelstång, lagerblad och kardemumma i mycket olja. Matskedar olja
+step: Finhacka löken och skär peppar i större bitar
+step: När kardemumman "poppar", i med lök. Rör om ibland
+step: Tärna tomater, sen i med vitlöks/ingefärapaste och peppar med löken
+step: När löken blivit färdigstekt och genomskinlig, blanda i kryddor ordentligt
+step: Så fort kryddorna blandats runt, i med tomater och tomatpuré samt någon matsked vatten. Låt sjuda
+step: Efter tomaterna och vätskan reducerats lite grand, i med mer vatten och kikärtorna
+step: Fortsätt hälla på med vätska enligt egen preferens av konsistens
+step: När kikärtorna är färdiga, eller rätt konsistens är nådd, blanda i garam masalan och låt sjuda några sekunder innan servering
+ingredient: 230g kikärtor
+ingredient: 2 tomater
+ingredient: 5cm kanelstång
+ingredient: 1 gul lök
+ingredient: 2 gröna chilipeppar
+ingredient: 1/2tsk kardemummapulver
+ingredient: 1 lagerblad
+ingredient: 1msk tomatpuré
+ingredient: 1tsk ingefärapaste
+ingredient: 1tsk vitlökspaste
+ingredient: 1tsk garam masala
+ingredient: --- kryddmix ---
+ingredient: 1tsk currypulver
+ingredient: 1/2tsk spiskummin
+ingredient: 1/2tsk koriander
+ingredient: 1/2tsk chilipulver
