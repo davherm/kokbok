@@ -1,5 +1,7 @@
 package kokbok;
 
+import java.awt.BorderLayout;
+import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -33,7 +35,7 @@ public class Kokbok {
 
 		mainwindow.setBounds(0, 0, width, height);
 		
-		GridLayout grid = new GridLayout(0,3,100,100);
+		GridLayout grid = new GridLayout(0,3,100,100); //vertical, horizontal, width, height
 		mainpanel.setLayout(grid);
 		
 		
@@ -59,18 +61,30 @@ public class Kokbok {
 	public void createRecipeFrame(Recipe recipe) { 
 		JFrame window = new JFrame();
 		JPanel panel = new JPanel();
+		JPanel leftPanel = new JPanel();
+		JPanel rightPanel = new JPanel();
 		
 		window.setContentPane(panel);
 		window.setBounds(0, 0, width, height);
 		
-		BoxLayout box = new BoxLayout(panel, BoxLayout.Y_AXIS);
-		panel.setLayout(box);
+		GridLayout grid = new GridLayout(0,2,20,20); //
+		panel.setLayout(grid);
 		
-		for(String step : recipe.getSteps()) {
-			panel.add(new JLabel(step));
+		BoxLayout leftBox = new BoxLayout(leftPanel, BoxLayout.Y_AXIS);
+		BoxLayout rightBox = new BoxLayout(rightPanel, BoxLayout.Y_AXIS);
+		leftPanel.setLayout(leftBox);
+		rightPanel.setLayout(rightBox);
+		
+		panel.add(leftPanel);
+		panel.add(rightPanel);
+		
+		leftPanel.add(new JLabel(recipe.getTitle())).setFont(new Font("Serif",Font.BOLD, 24));
+		
+		for(int i = 0; i < recipe.getSteps().size(); i++) {
+			leftPanel.add(new JLabel("step " + i + ": " + recipe.getSteps().get(i)));
 		}
 		for(String ingredient : recipe.getIngredients()) {
-			panel.add(new JLabel(ingredient));
+			rightPanel.add(new JLabel(ingredient));
 		}
 		
 		
