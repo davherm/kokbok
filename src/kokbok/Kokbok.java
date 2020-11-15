@@ -1,6 +1,7 @@
 package kokbok;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -14,10 +15,14 @@ import javax.swing.*;
 
 public class Kokbok {
 	private int width = 800;
-	private int height = 600;
+	private int height = 480;
 	private ArrayList<Recipe> recipes= new ArrayList<Recipe>();
 	JFrame mainwindow;
 	JPanel mainpanel;
+	Color bg = new Color(100,200,200); //C color for adobe color Complementary
+	Color secondbg = new Color(153,255,255); //B color for bg
+	Color thirdbg = new Color(49,122,122); //A color for bg
+	Color buttonColor = new Color(200,140,100); //E color for bg^^
 	
 	public Kokbok() {	
 		initialize();
@@ -31,6 +36,7 @@ public class Kokbok {
 		mainwindow = new JFrame(); //window
 		mainpanel = new JPanel(); //actual contentpane
 		mainpanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10)); //outer padding
+		mainpanel.setBackground(bg);
 		mainwindow.setContentPane(mainpanel);
 
 		mainwindow.setBounds(0, 0, width, height);
@@ -41,6 +47,7 @@ public class Kokbok {
 		
 		
 		JButton newRecipe = new JButton("update recipes"); //first button to read recipes from file
+		newRecipe.setBackground(buttonColor);
 		mainpanel.add(newRecipe);
 		
 		newRecipe.addActionListener( new ActionListener()
@@ -63,6 +70,11 @@ public class Kokbok {
 		JPanel panel = new JPanel();
 		JPanel leftPanel = new JPanel();
 		JPanel rightPanel = new JPanel();
+		
+		panel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10)); //outer padding
+		panel.setBackground(thirdbg);
+		leftPanel.setBackground(bg);
+		rightPanel.setBackground(bg);
 		
 		window.setContentPane(panel);
 		window.setBounds(0, 0, width, height);
@@ -143,6 +155,7 @@ public class Kokbok {
 				
 		for(Recipe recipe : recipes) {
 			JButton recipeButton = new JButton(recipe.getTitle());
+			recipeButton.setBackground(buttonColor);
 			mainpanel.add(recipeButton);
 			
 			recipeButton.addActionListener( new ActionListener()
