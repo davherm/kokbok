@@ -71,9 +71,11 @@ public class Kokbok {
 		JPanel leftPanel = new JPanel();
 		JPanel rightPanel = new JPanel();
 		
-		panel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10)); //outer padding
+		panel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5)); //outer padding
 		panel.setBackground(thirdbg);
+		leftPanel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5)); //outer padding
 		leftPanel.setBackground(bg);
+		rightPanel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5)); //outer padding
 		rightPanel.setBackground(bg);
 		
 		window.setContentPane(panel);
@@ -93,10 +95,14 @@ public class Kokbok {
 		leftPanel.add(new JLabel(recipe.getTitle())).setFont(new Font("Serif",Font.BOLD, 24));
 		
 		for(int i = 1; i <= recipe.getSteps().size(); i++) {
-			leftPanel.add(new JLabel("<html>" + "step " + i + ": " + recipe.getSteps().get(i-1) + "</html>"));
+			JLabel step = new JLabel("<html>" + "step " + i + ": " + recipe.getSteps().get(i-1) + "</html>");
+			step.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
+			leftPanel.add(step);
 		}
 		for(String ingredient : recipe.getIngredients()) {
-			rightPanel.add(new JLabel(ingredient));
+			JLabel newIngredient = new JLabel(ingredient);
+			newIngredient.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
+			rightPanel.add(newIngredient);
 		}
 		
 		

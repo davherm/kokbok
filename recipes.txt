@@ -56,7 +56,7 @@ ingredient: 150g smör
 ingredient: 3dl mjöl
 ingredient: 1 ägg
 title: Kvass
-step: Rosta sönder brödet, verkligen svart och brandvarning i köket
+step: Rosta sönder brödet, verkligen svart och brandvarning i köket. 215g är 3 stora slices
 step: Koka upp vatten, lägg brödet i vattnet och på med lock. låt svalna över natten
 step: Blanda jäst och socker, 1krm jäst ~= 1g
 step: Sila bort alla brödrester och häll vidare vätskan i jäsbehållaren(dunken)
@@ -64,4 +64,4 @@ step: Häll i jästblandningen i dunken, håll för, skaka för allt du är vär
 step: På med jäsrör och låt stå i mörker två veckor
 ingredient: 1g jäst
 ingredient: 1dl socker
-ingredient: 3 slices bröd
+ingredient: 215g bröd
