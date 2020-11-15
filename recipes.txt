@@ -46,3 +46,12 @@ ingredient: 1tsk currypulver
 ingredient: 1/2tsk spiskummin
 ingredient: 1/2tsk koriander
 ingredient: 1/2tsk chilipulver
+title: Pajdeg Grundrecept
+step: Nyp ihop mjöl och smör till en grynig massa, kallare ingredienser nu blir frasigare deg senare så arbeta fort och förbered smöret i frysen lite grand
+step: Kläck i ägg, arbeta till en fast deg.
+step: Dra lite smör i pajformen, sen tryck ut degen jämlikt över formen. Dra lite i kanterna så de hänger över kanten, då dras den ihop lite mindre.
+step: Nagga degen några gånger för att minska krympning vid gräddning. Låt degen stå i kylskåp en timma.
+step: Förgrädda alltid degen 225C i 8-12 minuter
+ingredient: 150g smör
+ingredient: 3dl mjöl
+ingredient: 1 ägg
