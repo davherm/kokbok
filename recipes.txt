@@ -1,4 +1,4 @@
-title: tacokrydda
+title: Tacokrydda
 step: blanda allt?
 ingredient: 2tsk spiskummin
 ingredient: 2tsk paprikapulver
@@ -10,7 +10,7 @@ ingredient: 1krm koriander
 ingredient: 1krm oregano
 ingredient: 1krm salt
 ingredient: 1krm svartpeppar
-title: rödbetshummus
+title: Rödbetshummus
 step: sätt ugnenen på 200C, skiva rödbetorna i fjärdedelar
 step: rosta rödbetorna i ugnen 20min
 step: lägg allt i matberedare och mixa i flera sekunder, det ska bli en kräm.
@@ -20,7 +20,7 @@ ingredient: 100g kikärtor
 ingredient: 1msk citronsaft
 ingredient: 1msk sesamfrön
 ingredient: 2msk creme fraiche
-title: kikärtscurry
+title: Kikärtscurry
 step: Stek kanelstång, lagerblad och kardemumma i mycket olja. Matskedar olja
 step: Finhacka löken och skär peppar i större bitar
 step: När kardemumman "poppar", i med lök. Rör om ibland
