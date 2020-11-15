@@ -43,21 +43,9 @@ public class Kokbok {
 		
 		GridLayout grid = new GridLayout(0,3,100,100); //vertical, horizontal, width, height
 		mainpanel.setLayout(grid);
-		
-		
-		
-		JButton newRecipe = new JButton("update recipes"); //first button to read recipes from file
-		newRecipe.setBackground(buttonColor);
-		mainpanel.add(newRecipe);
-		
-		newRecipe.addActionListener( new ActionListener()
-		{
-		    public void actionPerformed(ActionEvent e)
-		    {
-		        readRecipesFromFile();
-		    }
-		});
-		
+
+		readRecipesFromFile();
+
 		
 		
 		
