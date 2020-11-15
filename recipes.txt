@@ -55,3 +55,13 @@ step: Förgrädda alltid degen 225C i 8-12 minuter
 ingredient: 150g smör
 ingredient: 3dl mjöl
 ingredient: 1 ägg
+title: Kvass
+step: Rosta sönder brödet, verkligen svart och brandvarning i köket
+step: Koka upp vatten, lägg brödet i vattnet och på med lock. låt svalna över natten
+step: Blanda jäst och socker, 1krm jäst ~= 1g
+step: Sila bort alla brödrester och häll vidare vätskan i jäsbehållaren(dunken)
+step: Häll i jästblandningen i dunken, håll för, skaka för allt du är värd. blanda ordentligt
+step: På med jäsrör och låt stå i mörker två veckor
+ingredient: 1g jäst
+ingredient: 1dl socker
+ingredient: 3 slices bröd
