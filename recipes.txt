@@ -11,7 +11,7 @@ ingredient: 1krm oregano
 ingredient: 1krm salt
 ingredient: 1krm svartpeppar
 title: Rödbetshummus
-step: sätt ugnenen på 200C, skiva rödbetorna i fjärdedelar
+step: sätt ugnen på 200C, skiva rödbetorna i fjärdedelar
 step: rosta rödbetorna i ugnen 20min
 step: lägg allt i matberedare och mixa i flera sekunder, det ska bli en kräm.
 step: smaka av med salt och peppar, mer fraiche/sesamfrön efter behov
@@ -90,5 +90,3 @@ ingredient: 1/2 rödlök
 ingredient: 1st röd peppar
 ingredient: 1dl grönsaksfond
 ingredient: 400ml kokosmjölk
-
-

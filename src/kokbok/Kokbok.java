@@ -125,7 +125,7 @@ public class Kokbok {
 		        	}
 		        	
 		        }
-		        else System.out.println("something bad was read");
+		        else System.out.println("something bad was read: " + data);
 		        
 		      }
 		      myReader.close();
