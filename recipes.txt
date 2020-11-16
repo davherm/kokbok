@@ -65,3 +65,30 @@ step: På med jäsrör och låt stå i mörker två veckor
 ingredient: 1g jäst
 ingredient: 1dl socker
 ingredient: 215g bröd
+title: Tofu Stroganoff
+step: Tärna tofun och stek den gyllene runt om i olja och liquid smoke
+step: Krydda med paprikapulver och tillsätt grädde, tomatpuré, dijonsenap och vatten
+step: Låt puttra i ca 5min, smaka av med salt och peppar
+ingredient: 200g tofu
+ingredient: 1dl grädde
+ingredient: 1msk tomatpuré
+ingredient: 1tsk dijonsenap
+ingredient: persilja till servering
+title: Tomatsoppa
+step: Lägg halverade tomater skuren sida upp på ugnsplåt och ringla olja över dem, lägg också på oskalad ingefära och vitlök(oskalad). Salta hela plåten
+step: Rosta på 180C i 20 min, ta sedan ut plåten
+step: Gör plats för skivad rödlök och röd peppar, ringla över mer olja och salta igen
+step: Rosta på 180C i 25min, ta sedan ut plåten och stäng av ugnen
+step: Skala ingefäran, kläm vitlöken
+step: Lägg allt i en gryta, tillsätt fond och kokosmjölk
+step: Låt sjuda några minuter, mixa sedan ordentligt(!) med stark stavmixer(700w är bra)
+step: Smaka av med vitvinsvinäger, salt och peppar. Vinägern gör mycket, snåla inte
+ingredient: 6st tomater
+ingredient: 1tumme ingefära
+ingredient: 4st vitlöksklyftor
+ingredient: 1/2 rödlök
+ingredient: 1st röd peppar
+ingredient: 1dl grönsaksfond
+ingredient: 400ml kokosmjölk
+
+
