@@ -35,6 +35,7 @@ public class Kokbok {
 	private void initialize() {
 		mainwindow = new JFrame(); //window
 		mainpanel = new JPanel(); //actual contentpane
+		mainwindow.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 		mainpanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10)); //outer padding
 		mainpanel.setBackground(bg);
 		mainwindow.setContentPane(mainpanel);
