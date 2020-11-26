@@ -56,15 +56,18 @@ ingredient: 150g smör
 ingredient: 3dl mjöl
 ingredient: 1 ägg
 title: Kvass
-step: Rosta sönder brödet, verkligen svart och brandvarning i köket. 215g är 3 stora slices
-step: Koka upp vatten, lägg brödet i vattnet och på med lock. låt svalna över natten
+step: Rosta sönder brödet. 215g är 3 stora slices
+step: Koka upp vatten. lägg brödet, russin och frukten i vattnet och på med lock. låt svalna över natten
 step: Blanda jäst och socker, 1krm jäst ~= 1g
-step: Sila bort alla brödrester och häll vidare vätskan i jäsbehållaren(dunken)
-step: Häll i jästblandningen i dunken, håll för, skaka för allt du är värd. blanda ordentligt
+step: Sila bort alla bitar och häll vidare vätskan i jäsbehållaren(dunken)
+step: Häll i jästblandningen i dunken, håll för, skaka för allt du är värd
 step: På med jäsrör och låt stå i mörker två veckor
 ingredient: 1g jäst
 ingredient: 1dl socker
 ingredient: 215g bröd
+ingredient: 1/2 citron
+ingredient: 1/2 apelsin
+ingredient: handfull russin
 title: Tofu Stroganoff
 step: Tärna tofun och stek den gyllene runt om i olja och liquid smoke
 step: Krydda med paprikapulver och tillsätt grädde, tomatpuré, dijonsenap och vatten
