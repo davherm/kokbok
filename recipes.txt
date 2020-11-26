@@ -96,11 +96,15 @@ step: I samma gryta, stek finhackad lök tills den är genomskinling/gyllene
 step: Lägg sedan i grytbitarna tillsammans med mycket smör, så att de kan bli en ordentlig fond av köttsafterna. salta och peppra ordentligt också.
 step: När bitarna börjat få yta runtom, pressa i vitlöken och låt koka några minuter till.
 step: Häll sedan i vatten, soja och fond. Blanda noggrant och låt sedan sjuda minst 30min
-step: Lägg i grädde och creme fraiche och låt sjuda minst 30min till
-step: Sista 15minuterna lägg i valfria kryddor. Rosmarin+timjan ger fin viltsmak
+step: Lägg i grädde, creme fraiche samt kryddor och låt sjuda minst 30min till
+step: Lägg sist i morötterna och champinjonerna, fortsätt sjuda tills de är färdiga ca 15 min
 step: Sista minuten smaka av med salt/peppar och persilja.
 ingredient: 500g grytbitar
 ingredient: 1-2 morötter
 ingredient: 5st champinjoner
 ingredient: 1 gul lök
 ingredient: 5st vitlöksklyftor
+ingredient: 5dl vatten
+ingredient: 2msk fond
+ingredient: 2dl grädde
+ingredient: 1dl creme fraiche
