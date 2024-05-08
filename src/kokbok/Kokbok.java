@@ -42,14 +42,11 @@ public class Kokbok {
 
 		mainwindow.setBounds(0, 0, width, height);
 		
-		GridLayout grid = new GridLayout(0,3,100,100); //vertical, horizontal, width, height
+		GridLayout grid = new GridLayout(0,3,50,50); //vertical, horizontal, width, height
 		mainpanel.setLayout(grid);
 
 		readRecipesFromFile();
 
-		
-		
-		
 		mainwindow.setVisible(true);
 	}
 	
@@ -126,17 +123,22 @@ public class Kokbok {
 		        	}
 		        	
 		        }
-		        else System.out.println("something bad was read: " + data);
+		        else if(data.length() < 2) { System.out.println("Empty line was read: "); data = myReader.nextLine(); }
+		        else { System.out.println("something bad was read: " + data); data = myReader.nextLine(); }
 		        
 		      }
 		      myReader.close();
-		    } 
-		
+		    }
 		catch (FileNotFoundException e) 
 			{
-		      System.out.println("An error occurred.");
+		      System.out.println("File not found.");
 		      e.printStackTrace();
 		    }		
+		catch (Exception e) 
+		{
+	      System.out.println("Something went wrong when reading from file. Perhaps empty lines?");
+	      e.printStackTrace();
+	    }	
 
 		
 		updateRecipeButtons();
